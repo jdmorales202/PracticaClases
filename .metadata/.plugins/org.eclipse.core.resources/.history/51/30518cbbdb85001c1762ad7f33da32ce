@@ -34,8 +34,6 @@ public class Principal {
 		
 		System.out.println(paciente0.toString());
 		
-		System.out.println("Hola mundo");
-		
 	}
 
 }
