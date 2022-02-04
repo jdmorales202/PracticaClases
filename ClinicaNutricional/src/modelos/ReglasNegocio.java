@@ -1,0 +1,60 @@
+package modelos;
+
+import javax.swing.JOptionPane;
+
+public class ReglasNegocio {
+	
+	public ReglasNegocio() {
+		super();
+	}
+	
+	public int ConvertirEntero(String cadena) {
+		int resultado=0;
+		try {
+			resultado=Integer.parseInt(cadena);
+		}catch (NumberFormatException e) {
+			
+		}
+		return resultado;
+		
+	}
+
+	public int SolicitarEntero(String mensaje) {
+		int respuest=0;
+		while(respuest<1) {
+			respuest=ConvertirEntero(JOptionPane.showInputDialog(mensaje));
+		}
+			return respuest;	
+		
+	}
+	
+	public double ConvertirReal(String cadena) {
+		double resulta =0.0;
+		 try {
+			 resulta=Double.parseDouble(cadena);
+	  }catch (NumberFormatException e) {
+		  
+	  }
+		 return resulta;
+	}
+	
+	public double solicitarReal(String mensaje) {
+		double retorno=0.0;
+				while(retorno<1) {
+					retorno = ConvertirReal(JOptionPane.showInputDialog(mensaje));
+	           }
+				return retorno;
+	}
+	
+	public String SolicitarSexo() {
+		String resulta="";
+		boolean correcto=false;
+		while(!correcto ) {
+			resulta=JOptionPane.showInputDialog("Por favor ingrese el sexo del paciente");
+			correcto=Paciente.comprobarsexo2(resulta);
+			
+		}
+		return resulta;
+	}
+}
+ 
