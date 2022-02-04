@@ -1,0 +1,32 @@
+package modelos;
+
+import javax.swing.JOptionPane;
+
+public class ReglasNegocio {
+	
+	public ReglasNegocio() {
+		super();
+	}
+	
+	public int ConvertirEntero(String cadena) {
+		int resultado=0;
+		try {
+			resultado=Integer.parseInt(cadena);
+		}catch (NumberFormatException e) {
+			
+		}
+		return resultado;
+		
+	}
+
+	public int SolicitarEntero(String mensaje) {
+		int respuest=0;
+		while(respuest<1) {
+			respuest=ConvertirEntero(JOptionPane.showInputDialog(mensaje));
+		}
+			return respuest;	
+		
+	}
+	
+}
+ 

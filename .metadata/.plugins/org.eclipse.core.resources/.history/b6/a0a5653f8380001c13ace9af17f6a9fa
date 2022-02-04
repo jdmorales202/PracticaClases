@@ -1,0 +1,54 @@
+package modelos;
+
+public class Paciente extends Persona {
+
+	private String fechaprimerconsulta;
+	private String medicotratande;
+	
+	
+	
+	public Paciente() {
+		super();
+	}
+	public String getFechaprimerconsulta() {
+		return fechaprimerconsulta;
+	}
+	public void setFechaprimerconsulta(String fechaprimerconsulta) {
+		this.fechaprimerconsulta = fechaprimerconsulta;
+	}
+	public String getMedicotratande() {
+		return medicotratande;
+	}
+	public void setMedicotratande(String medicotratande) {
+		this.medicotratande = medicotratande;
+	}
+	
+	public int calcularIMC(int peso,double altura) {
+		double pesoIdeal=(peso/Math.pow(altura,2));
+		int retorno;
+		
+		if(pesoIdeal>peso) {
+			
+			retorno=-1;
+		}else if(peso>pesoIdeal) {
+			
+			retorno=1;
+		}else {
+			retorno=0;
+		}
+		return retorno;
+		
+	}
+	
+	public boolean esMayorDeEdad() {
+		int edad;
+		if(edad>=18) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	public boolean comprobarsexo() {
+		if(sexo.equalsIgnoreCase("h")|| sexo.equalsIgnoreCase("m"));
+	}
+}
